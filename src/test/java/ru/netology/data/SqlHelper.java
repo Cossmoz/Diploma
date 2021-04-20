@@ -12,6 +12,7 @@ public class SqlHelper {
     private static String user = System.getProperty("db.user");
     private static String password = System.getProperty("db.password");
 
+
     public static void cleanDB() {
         val cleanCreditRequestEntityTab = "DELETE FROM credit_request_entity;";
         val cleanOrderEntityTab = "DELETE FROM order_entity;";
@@ -31,7 +32,7 @@ public class SqlHelper {
         return getData(codesSQL);
     }
 
-    public static String getCreditRequestStatus() {
+    public static String getCreditPaymentStatus() {
         val codesSQL = "SELECT status FROM credit_request_entity;";
         return getData(codesSQL);
     }

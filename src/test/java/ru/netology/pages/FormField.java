@@ -1,15 +1,9 @@
 package ru.netology.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import ru.netology.data.Card;
-
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-import static ru.netology.pages.Notification. *;
 
 
 public class FormField {

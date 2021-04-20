@@ -4,20 +4,19 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.$$;
 
+
 public class PaymentType {
     private static SelenideElement buyButton = $$(".button").find(exactText("Купить"));
     private static SelenideElement creditButton = $$(".button").find(exactText("Купить в кредит"));
 
 
 
-    public static BuyTour goToBuyTour() {
+    public static void goToBuyTour() {
         buyButton.click();
-        return new BuyTour();
     }
 
-    public BuyTourOnCredit goToBuyTourOnCredit() {
+    public static void goToBuyTourOnCredit() {
         creditButton.click();
-        return new BuyTourOnCredit();
     }
 
 }

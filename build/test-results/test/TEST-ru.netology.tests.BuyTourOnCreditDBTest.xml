@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.netology.tests.BuyTourOnCreditDBTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-04-20T23:15:34" hostname="DESKTOP-KCLH9G5" time="19.972">
+  <properties/>
+  <testcase name="shouldBeApprovedPaymentStatusInDBCredit()" classname="ru.netology.tests.BuyTourOnCreditDBTest" time="11.071"/>
+  <testcase name="shouldBeDeclinedPaymentStatusInDBCredit()" classname="ru.netology.tests.BuyTourOnCreditDBTest" time="8.897"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 13 - let's create a new webdriver
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: D:\Neto\diploma_qa\build\downloads\1618960535018_20012_13
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 90.0.4430.24 (resolved driver for Chrome 90)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Coss\.cache\selenium\chromedriver\win32\90.0.4430.24\chromedriver.exe
+[Test worker] INFO com.codeborne.selenide.webdriver.AbstractDriverFactory - Write webdriver logs to: D:\Neto\diploma_qa\build\reports\tests\webdriver.1618960535421_20012_13.log
+Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 45087
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+апр. 21, 2021 3:15:36 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[Test worker] INFO com.codeborne.selenide.webdriver.BrowserResizer - Set browser size to 1366x768
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=90.0.4430.72 Platform=WINDOWS
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 5.16.2
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Create webdriver in current thread 13: ChromeDriver -> ChromeDriver: chrome on WINDOWS (d1e1796e51e9fb7ec067b317c2fb95f5)
+]]></system-err>
+</testsuite>
