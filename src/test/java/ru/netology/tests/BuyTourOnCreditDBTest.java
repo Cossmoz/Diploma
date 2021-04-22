@@ -41,9 +41,9 @@ public class BuyTourOnCreditDBTest {
     // Positive tests
 
     @Test
-    void shouldBeWrongNotificationCredit() {
+    void shouldBeNotCountAfterEmptyCardCredit() {
         inputData(DataHelper.getEmptyCard());
-        wrongNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test

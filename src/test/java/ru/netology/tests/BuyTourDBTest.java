@@ -40,7 +40,7 @@ public class BuyTourDBTest {
 
     // Positive tests
     @Test
-    void shouldBeNotCountBuy() {
+    void shouldBeNotCountAfterEmptyCardBuy() {
         inputData(DataHelper.getEmptyCard());
         assertEquals("0", SqlHelper.getOrderCount());
     }
