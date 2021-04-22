@@ -168,14 +168,6 @@ public class DataHelper {
         return new Card(APPROVED_CARD_NUMBER, month, year, holder, cvv);
     }
 
-    public static Card getCardMaxYearValue() {
-        Faker faker = new Faker(new Locale("ru"));
-        String month = getMonth();
-        String year = String.valueOf((Year.now().getValue() % 100) + 5);
-        String holder = transliterate(faker.name().firstName() + " " + faker.name().lastName());
-        String cvv = faker.number().digits(3);
-        return new Card(APPROVED_CARD_NUMBER, month, year, holder, cvv);
-    }
 
 
 

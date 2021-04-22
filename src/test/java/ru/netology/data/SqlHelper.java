@@ -37,6 +37,7 @@ public class SqlHelper {
         return getData(codesSQL);
     }
 
+
     public static String getOrderCount() {
         Long count = null;
         val codesSQL = " SELECT COUNT(*) FROM order_entity;";

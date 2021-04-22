@@ -39,9 +39,9 @@ public class BuyTourUITest {
     // Positive tests
 
     @Test
-    void shouldBeWrongHolderNotificationOperationNotificationBuy() {
+    void shouldBeWrongNotificationBuy() {
         inputData(DataHelper.getEmptyCard());
-        requiredToFillNotification();
+        wrongNotification();
     }
 
     @Test
@@ -56,11 +56,6 @@ public class BuyTourUITest {
         failedOperationNotification();
     }
 
-    @Test
-    void shouldBeWrongFormatNotificationAfterCardMaxYearValueBuy() {
-        inputData(DataHelper.getCardMaxYearValue());
-        approvedOperationNotification();
-    }
 
 
     // Negative tests

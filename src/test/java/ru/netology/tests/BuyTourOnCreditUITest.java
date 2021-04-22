@@ -9,6 +9,7 @@ import ru.netology.data.SqlHelper;
 import ru.netology.pages.PaymentType;
 
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.netology.data.DataHelper.openURL;
 import static ru.netology.pages.FormField.inputData;
 import static ru.netology.pages.Notification.*;
@@ -41,9 +42,9 @@ public class BuyTourOnCreditUITest {
     // Positive tests
 
     @Test
-    void shouldBeWrongHolderNotificationOperationNotificationCredit() {
+    void shouldBeNotCountCredit() {
         inputData(DataHelper.getEmptyCard());
-        requiredToFillNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
@@ -64,133 +65,128 @@ public class BuyTourOnCreditUITest {
     // Not Valid Number Tests
 
     @Test
-    void shouldBeRequiredToFilAfterWithoutCardNumberCredit() {
+    void shouldBeNotCountAfterWithoutCardNumberCredit() {
         inputData(DataHelper.getCardWithoutCardNumber());
-        requiredToFillNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfter15DigitCardNumberCredit() {
+    void shouldBeNotCountAfter15DigitCardNumberCredit() {
         inputData(DataHelper.getCard15DigitCardNumber());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     // Not Valid Month Tests
 
     @Test
-    void shouldBeRequiredToFilNotificationAfterWithoutMonthValueCredit() {
+    void shouldBeNotCountAfterWithoutMonthValueCredit() {
         inputData(DataHelper.getCardWithoutMonthValue());
-        requiredToFillNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
 
     @Test
-    void shouldBeWrongFormatNotificationAfter1DigitMonthValueCredit() {
+    void shouldBeNotCountAfter1DigitMonthValueCredit() {
         inputData(DataHelper.getCard1DigitMonthValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeExpiredCardNotificationAfterOver12MonthValueCredit() {
+    void shouldBeNotCountAfterOver12MonthValueCredit() {
         inputData(DataHelper.getCardOver12MonthValue());
-        wrongExpiredCardNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfter00MonthValueCredit() {
+    void shouldBeNotCountAfter00MonthValueCredit() {
         inputData(DataHelper.getCard00MonthValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     // Not Valid Year Tests
 
     @Test
-    void shouldBeRequiredToFilNotificationAfterWithoutYearValueCredit() {
+    void shouldBeNotCountAfterWithoutYearValueCredit() {
         inputData(DataHelper.getCardWithoutYearValue());
-        requiredToFillNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfterCard1DigitYearValueCredit() {
+    void shouldBeNotCountAfterCard1DigitYearValueCredit() {
         inputData(DataHelper.getCard1DigitYearValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeExpiredCardNotificationAfterCardLessCurrentYearValueCredit() {
+    void shouldBeNotCountAfterCardLessCurrentYearValueCredit() {
         inputData(DataHelper.getCardLessCurrentYearValue());
-        expiredCardNotification();
-    }
-
-    @Test
-    void shouldBeWrongFormatNotificationAfterCardMaxYearValueCredit() {
-        inputData(DataHelper.getCardMaxYearValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
 
+
     @Test
-    void shouldBeExpiredCardNotificationAfterCardCurrentYearPlus6ValueCredit() {
+    void shouldBeNotCountAfterCardCurrentYearPlus6ValueCredit() {
         inputData(DataHelper.getCardCurrentYearPlus6Value());
-        wrongExpiredCardNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeExpiredCardNotificationAfterCard00MYearValueCredit() {
+    void shouldBeNotCountAfterCard00MYearValueCredit() {
         inputData(DataHelper.getCard00MYearValue());
-        expiredCardNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     // Not Valid Holder Tests
 
     @Test
-    void shouldBeRequiredToFilNotificationAfterCardWithoutHolderValueCredit() {
+    void shouldBeNotCountAfterCardWithoutHolderValueCredit() {
         inputData(DataHelper.getCardWithoutHolderValue());
-        requiredToFillNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfterCard1WordHolderValueCredit() {
+    void shouldBeNotCountAfterCard1WordHolderValueCredit() {
         inputData(DataHelper.getCard1WordHolderValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfterCardCyrillicHolderValueCredit() {
+    void shouldBeNotCountAfterCardCyrillicHolderValueCredit() {
         inputData(DataHelper.getCardCyrillicHolderValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfterCardDigitsHolderValueCredit() {
+    void shouldBeNotCountAfterCardDigitsHolderValueCredit() {
         inputData(DataHelper.getCardDigitsHolderValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfterCardSymbolsHolderValueCredit() {
+    void shouldBeNotCountAfterCardSymbolsHolderValueCredit() {
         inputData(DataHelper.getCardSymbolsHolderValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     // Not Valid Holder CVV
 
     @Test
-    void shouldBeRequiredToFilNotificationAfterCardWithoutCvvValueCredit() {
+    void shouldBeNotCountAfterCardWithoutCvvValueCredit() {
         inputData(DataHelper.getCardWithoutCvvValue());
-        requiredToFillNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfterCard1DigitCvvValueCredit() {
+    void shouldBeNotCountAfterCard1DigitCvvValueCredit() {
         inputData(DataHelper.getCard1DigitCvvValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
     @Test
-    void shouldBeWrongFormatNotificationAfterCard2DigitCvvValueCredit() {
+    void shouldBeNotCountAfterCard2DigitCvvValueCredit() {
         inputData(DataHelper.getCard2DigitCvvValue());
-        wrongFormatNotification();
+        assertEquals("0", SqlHelper.getOrderCount());
     }
 
 }

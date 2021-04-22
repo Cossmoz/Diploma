@@ -19,20 +19,24 @@ public class Notification {
     }
 
     public static void wrongFormatNotification() {
-        $(".input__sub").shouldBe(visible).shouldHave(exactText("Неверный формат"));;
+        $(".input__sub").shouldBe(visible).shouldHave(exactText("Неверный формат"));
     }
 
     public static void requiredToFillNotification() {
-        $(".input__sub").shouldBe(visible).shouldHave(exactText("Поле обязательно для заполнения"));;
+        $(".input__sub").shouldBe(visible).shouldHave(exactText("Поле обязательно для заполнения"));
     }
 
 
     public static void expiredCardNotification() {
-        $(".input__sub").shouldBe(visible).shouldHave(exactText("Истёк срок действия карты"));;
+        $(".input__sub").shouldBe(visible).shouldHave(exactText("Истёк срок действия карты"));
     }
 
     public static void wrongExpiredCardNotification() {
-        $(".input__sub").shouldBe(visible).shouldHave(exactText("Неверно указан срок действия карты"));;
+        $(".input__sub").shouldBe(visible).shouldHave(exactText("Неверно указан срок действия карты"));
+    }
+
+    public static void wrongNotification() {
+        $(".input__sub").shouldBe(visible);
     }
 
 
