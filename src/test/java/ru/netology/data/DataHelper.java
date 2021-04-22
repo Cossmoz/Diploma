@@ -1,11 +1,10 @@
 package ru.netology.data;
 
 import com.github.javafaker.Faker;
-
 import java.time.Year;
 import java.util.Locale;
-
 import static com.codeborne.selenide.Selenide.open;
+
 
 public class DataHelper {
 
@@ -230,7 +229,7 @@ public class DataHelper {
         Faker faker = new Faker(new Locale("ru"));
         String month = getMonth();
         String year = getYear();
-        String holder = (transliterate(faker.name().firstName())) + "@$#*&";
+        String holder = (transliterate(faker.name().firstName())) + " @$#*&";
         String cvv = faker.number().digits(3);
         return new Card(APPROVED_CARD_NUMBER, month, year, holder, cvv);
     }

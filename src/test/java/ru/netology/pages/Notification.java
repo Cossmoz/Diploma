@@ -1,7 +1,6 @@
 package ru.netology.pages;
 
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 
@@ -36,6 +35,7 @@ public class Notification {
     }
 
     public static void wrongNotification() {
+
         $(".input__sub").shouldBe(visible);
     }
 
