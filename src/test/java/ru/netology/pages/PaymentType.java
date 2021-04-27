@@ -6,17 +6,19 @@ import static com.codeborne.selenide.Selenide.$$;
 
 
 public class PaymentType {
-    private static SelenideElement buyButton = $$(".button").find(exactText("Купить"));
-    private static SelenideElement creditButton = $$(".button").find(exactText("Купить в кредит"));
+    private SelenideElement buyButton = $$(".button").find(exactText("Купить"));
+    private SelenideElement creditButton = $$(".button").find(exactText("Купить в кредит"));
 
 
 
-    public static void goToBuyTour() {
+    public PaymentType goToBuyTour() {
         buyButton.click();
+        return null;
     }
 
-    public static void goToBuyTourOnCredit() {
+    public PaymentType goToBuyTourOnCredit() {
         creditButton.click();
+        return null;
     }
 
 }

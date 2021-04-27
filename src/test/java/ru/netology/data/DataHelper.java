@@ -1,22 +1,14 @@
 package ru.netology.data;
 
 import com.github.javafaker.Faker;
-
 import java.time.Year;
 import java.util.Locale;
-
-import static com.codeborne.selenide.Selenide.open;
 
 public class DataHelper {
 
     private static final String APPROVED_CARD_NUMBER = "4444444444444441";
     private static final String DECLINED_CARD_NUMBER = "4444444444444442";
-    private static final String URL = "http://localhost:8080/";
 
-
-    public static void openURL () {
-        open(URL);
-    }
 
     public static String getMonth() {
         int minMonth = 1;
