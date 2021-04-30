@@ -5,7 +5,7 @@ import ru.netology.data.DataHelper;
 import ru.netology.data.SqlHelper;
 import ru.netology.pages.FormField;
 import ru.netology.pages.PaymentType;
-import ru.netology.pages.TestBase;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 

@@ -5,8 +5,8 @@ import ru.netology.data.DataHelper;
 import ru.netology.data.SqlHelper;
 import ru.netology.pages.FormField;
 import ru.netology.pages.PaymentType;
-import ru.netology.pages.TestBase;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 
 public class BuyTourTest extends TestBase {
@@ -28,8 +28,10 @@ public class BuyTourTest extends TestBase {
         PaymentType paymentType = new PaymentType();
         paymentType.goToBuyTour();
         formDate.inputData(DataHelper.getApprovedCard());
-        formDate.verifyApprovedOperationNotification();
-        assertEquals("APPROVED", SqlHelper.getPaymentStatus());
+        Assertions.assertAll(
+                () ->  formDate.verifyApprovedOperationNotification(),
+                () -> assertEquals("APPROVED", SqlHelper.getPaymentStatus())
+        );
     }
 
     @Test
@@ -37,8 +39,10 @@ public class BuyTourTest extends TestBase {
         PaymentType paymentType = new PaymentType();
         paymentType.goToBuyTour();
         formDate.inputData(DataHelper.getDeclinedCard());
-        formDate.verifyFailedOperationNotification();
-        assertEquals("DECLINED", SqlHelper.getPaymentStatus());
+        Assertions.assertAll(
+                () ->  formDate.verifyFailedOperationNotification(),
+                () -> assertEquals("DECLINED", SqlHelper.getPaymentStatus())
+        );
     }
 
     @Test
