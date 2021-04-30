@@ -12,8 +12,9 @@
 
 ## Тестовая документация
 1. [План тестирования](https://github.com/Cossmoz/Diploma/blob/master/Documents/Plan.md);
-1. 
-1.
+1. [Отчёт по итогам тестирования](https://github.com/Cossmoz/Diploma/blob/master/Documents/Report.md);
+1. [Отчет по итогам автоматизации](https://github.com/Cossmoz/Diploma/blob/master/Documents/Summary.md).
+
 ## Запуск приложения
 ### Подготовительный этап
 1. Установить и запустить IntelliJ IDEA;
