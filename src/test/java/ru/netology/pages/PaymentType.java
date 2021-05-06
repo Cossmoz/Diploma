@@ -11,14 +11,12 @@ public class PaymentType {
 
 
 
-    public PaymentType goToBuyTour() {
+    public void goToBuyTour() {
         buyButton.click();
-        return null;
     }
 
-    public PaymentType goToBuyTourOnCredit() {
+    public void goToBuyTourOnCredit() {
         creditButton.click();
-        return null;
     }
 
 }
